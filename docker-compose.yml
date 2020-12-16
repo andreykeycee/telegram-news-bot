@@ -1,14 +1,7 @@
 version: "3"
-
 services:
-  node:
-    image: node:13-stretch
-    user: node
-    volumes:
-      - .:/home/node/landing
-    working_dir: /home/node/landing
-    command: ['bash', '-c', 'true; yarn install; node index.js']
-    restart: always
+  bot:
+    build: .
     environment:
       BOT_TOKEN: ${BOT_TOKEN}
     ports:
