@@ -7,7 +7,7 @@ services:
     volumes:
       - .:/home/node/landing
     working_dir: /home/node/landing
-    command: ['bash', '-c', 'true; yarn install; yarn build; yarn start']
+    command: ['bash', '-c', 'true; yarn install; node index.js']
     restart: always
     environment:
       BOT_TOKEN: ${BOT_TOKEN}
